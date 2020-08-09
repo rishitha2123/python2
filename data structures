@@ -1,0 +1,73 @@
+#Assigning elements to different lists
+print("ASSIGNING ELEMENTS TO DIFFERENT LISTS\n")
+#create lists
+list1 = ['eyes', 'ears', 'nose']
+print("The original list1 is : "+str(list1))
+list2 = ['chocolate', 'icecream', 'burger']
+print("The original list2 is : "+str(list2))
+#append element at end
+list1.append('tongue')
+list2.append('pizza')
+print("List1 after appending element at end :"+str(list1))
+print("list2 after appending element at end :"+str(list2))
+#insert element at index 0
+list1.insert(0, 'hands')
+list2.insert(2, 'vegpuff')
+print ("The index number of ears in list1 :"+ str(list1.index('ears')))
+print ("The index number of pizza in list2 :"+str(list2.index('pizza')))
+#add list of elements at end
+list1.extend(['legs', 'fingers'])
+list2.extend(['french fries', 'popcorn'])  
+print ("After assigning elements to list1 :"+str(list1))
+print ("After assigning elements to list2 :"+str(list2))  
+print("\n")
+
+
+# Accesing elements from a tuple
+print("ACCESSING ELEMENTS FROM A TUPLE\n")
+#initializing list of tuples 
+marks_list = [(1, 'Kavya', 21), (2, 'Rishi', 23), (3, 'Arjun', 17)] 
+# printing original list
+print ("The original list is : " + str(marks_list))  
+res = [lis[1] for lis in marks_list]
+res1 = [lis[2] for lis in marks_list]      
+# printing result 
+print ("List with only 1th tuple element (i.e names) : " + str(res))
+print ("List with only 2th tuple element (i.e marks out of 25) : " + str(res1)) 
+print("\n")
+
+
+#Deleting different dictionary elements
+print("DELETING DIFFERENT DICTIONARY ELEMENTS\n")
+# create  dictionaries
+squares = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+cubes = {1: 1, 2: 8, 3: 27, 4: 64}
+print("The original dictionary1 squares is :"+str(squares))
+print("The original dictionary2 cubes is :"+str(cubes))
+# remove a particular item, returns its value
+print("elements to be removed from squares :")
+print(squares.pop(4))
+print(squares.pop(2))
+print("elements to be removed from cubes :")
+print(cubes.pop(3))
+print(cubes.pop(1))
+print("After removing two items from the squares dictionary ,remaining elements are : "+str(squares))
+print("After removing two items from cubes dictionary ,remaining elements are : "+str(cubes))
+# remove an arbitrary item, return (key,value)
+print("Element to be removed :"+str(squares.popitem()))
+print("Element to be removed :"+str(cubes.popitem()))
+print("Squares(Dictionary1) after removing an arbitrary item ;"+str(squares))
+print("Cubes(Dictionary2) after removing an arbitrary item ;"+str(cubes))
+# remove all items
+squares.clear()
+cubes.clear()
+print("Squares(Dictionary1) after clearing :"+str(squares))
+print("Squares(Dictionary2) after clearing :"+str(cubes))
+# delete the dictionary itself
+del squares
+del cubes
+""" Throws Error when you type the following:
+print(squares)
+print(cubes)
+"""
+print("\nDONE!\nTHANK YOU!")
